@@ -1,10 +1,6 @@
-// Puedes agregar funcionalidades interactivas aquí si lo necesitas.
-// Por ejemplo, para implementar un botón de cambio de modo oscuro/claro
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Portafolio de Sergio González García listo!");
-});
 
-document.addEventListener('DOMContentLoaded', () => {
     const email = "sergiogg20012003@gmail.com";
     
     // Botón para enviar correo con mailto
@@ -18,18 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyMessage = document.getElementById("copyMessage");
 
     copyBtn.addEventListener("click", () => {
-        // Crear un elemento temporal de texto para copiar el correo
-        const tempInput = document.createElement("input");
-        tempInput.value = email;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
+        navigator.clipboard.writeText(email).then(() => {
+            // Mostrar el mensaje de éxito
+            copyMessage.style.display = "block";
+            setTimeout(() => {
+                copyMessage.style.display = "none";
+            }, 2000); // Ocultar el mensaje después de 2 segundos
+            alert("Correo copiado al portapapeles: " + email); // Alerta adicional
+        }).catch(err => {
+            console.error('Error al copiar el texto: ', err);
+        });
+    });
 
-        // Mostrar el mensaje de éxito
-        copyMessage.style.display = "block";
-        setTimeout(() => {
-            copyMessage.style.display = "none";
-        }, 2000); // Ocultar el mensaje después de 2 segundos
+    // Implementación del cambio de modo claro/oscuro
+    const toggleThemeBtn = document.getElementById("toggleThemeBtn");
+    toggleThemeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode"); // Alternar clase de modo claro
+
+        // Cambiar el texto del botón según el modo
+        if (document.body.classList.contains("light-mode")) {
+            toggleThemeBtn.textContent = "Cambiar a modo oscuro"; // Texto para volver a oscuro
+        } else {
+            toggleThemeBtn.textContent = "Cambiar a modo claro"; // Texto para ir a claro
+        }
     });
 });

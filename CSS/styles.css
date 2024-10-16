@@ -1,20 +1,104 @@
+/* Variables CSS para colores y fuentes */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-color: #1e1e1e;
+    --text-color: #f5f5f5;
+    --header-bg-color: #333;
+    --container-bg-color: #333;
+}
+
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, serif;
+    font-family: Georgia, Arial, sans-serif; /* Fuentes alternativas */
 }
 
 body {
     line-height: 1.6;
-    background-color: #1e1e1e;
-    color: #f5f5f5;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
+
+/* Estilos por defecto (Modo Oscuro) */
+body {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #f5f5f5; /* Texto claro */
+}
+
+header, footer {
+    background: #333; /* Fondo del encabezado y pie de página oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos para el modo claro */
+body.light-mode {
+    background-color: #f5f5f5; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+}
+
+body.light-mode .contact a {
+    background-color: #e0e0e0;
+}
+
+body.light-mode .container2 #copyMessage {
+    background-color: #797979;
+}
+
+body.light-mode header, body.light-mode footer {
+    background: #fff; /* Fondo blanco para el encabezado y pie de página */
+    color: #000; /* Texto negro */
+}
+
+body.light-mode h2 {
+    background-color: #f5f5f5; /* Fondo más claro para secciones */
+    color: #333; /* Texto oscuro */
+}
+
+body.light-mode .container h2 {
+    background-color: #f5f5f5; /* Fondo más claro para secciones */
+    color: #333; /* Texto oscuro */
+}
+
+/* Cambiar el fondo de contenedores cuando esté en modo claro */
+body.light-mode .container2,
+body.light-mode #about,
+body.light-mode #projects .project {
+    background-color: #e0e0e0; /* Fondo más claro para secciones */
+    color: #333; /* Texto oscuro */
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bff; /* Color principal del botón */
+    color: white;
+}
+
+/* Cambiar colores de botones en modo claro */
+body.light-mode button {
+    background-color: #0056b3; /* Color diferente para botones en modo claro */
+    color: white;
+}
+
+/* Otros estilos permanecen igual */
 
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+}
+
+.sobre-mi {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .contact img {
@@ -24,7 +108,7 @@ body {
 }
 
 header {
-    background: #333;
+    background: var(--header-bg-color);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -54,15 +138,15 @@ header .contact a {
 }
 
 header .contact a:hover {
-    background: #0056b3;
+    background: var(--secondary-color);
 }
 
 .container2 {
     text-align: center;
-    background: #333;
+    background: var(--header-bg-color);
 }
 
-.container2 p{
+.container2 p {
     background-color: #fff;
     color: #000;
     border-radius: 40px;
@@ -75,7 +159,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -84,12 +168,12 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color);
 }
 
 #copyMessage {
     margin-top: 10px;
-    background-color: #333;
+    background-color: var(--header-bg-color);
 }
 
 section {
@@ -103,29 +187,28 @@ h2 {
 }
 
 #about {
-    background-color: #333;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    background-color: var(--container-bg-color);
+    margin: 30px auto; /* Centrar la sección */
     padding: 30px;
     border-radius: 30px;
-    margin-left: 500px;
-    margin-right: 500px;
+    max-width: 800px; /* Limitar ancho para mejor diseño */
 }
 
 #about p {
     margin: 10px 0;
 }
 
-button {
+/* Estilos generales de botones */
+.btn {
     padding: 10px 20px;
-    background: #007bff;
-    color: #fff;
+    background: var(--primary-color);
+    color: white;
     border: none;
     border-radius: 5px;
 }
 
-button:hover {
-    background: #0056b3;
+.btn:hover {
+    background: var(--secondary-color);
 }
 
 .container {
@@ -143,6 +226,12 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 35px;
+    margin-bottom: -20px;
+}
+
+.skills h3 {
+    margin-bottom: 15px;
 }
 
 .skill-row {
@@ -201,13 +290,11 @@ h2 {
 }
 
 #projects .project {
-    background-color: #333;
-    margin-top: 30px;
+    background-color: var(--container-bg-color);
+    margin: 30px auto; /* Centrar los proyectos */
     padding: 30px;
     border-radius: 30px;
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-bottom: 20px;
+    max-width: 800px; /* Limitar ancho para mejor diseño */
 }
 
 .project a {
@@ -215,12 +302,190 @@ h2 {
 }
 
 #projects a {
-    color: #007bff;
+    color: var(--primary-color);
 }
 
 footer {
-    background: #333;
+    background: var(--header-bg-color);
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
+
+/* Diseño para pantallas de menos de 768px (tabletas y móviles) */
+@media (max-width: 768px) {
+    /* Ajusta el contenedor principal al 100% del ancho de la pantalla */
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* Centra la imagen de perfil y ajusta su tamaño */
+    header img {
+        width: 150px;
+    }
+
+    /* Ajusta la cabecera */
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    /* Los botones de contacto serán más pequeños */
+    header .contact a {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin: 5px;
+    }
+
+    /* El correo y botones de la sección "Sobre mí" se ajustarán mejor */
+    .container2 {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    /* Evita que los párrafos se desborden */
+    #about {
+        margin: 0; /* Usar márgenes automáticos para centrar */
+        padding: 20px;
+    }
+
+    /* Ajuste de las habilidades en una sola columna */
+    .skill-row {
+        flex-direction: column;
+    }
+
+    /* Ajuste del tamaño de los iconos de habilidades */
+    .skill img {
+        width: 60px;
+    }
+
+    /* Los proyectos también ocuparán el 100% del ancho */
+    #projects .project {
+        margin: 0; /* Usar márgenes automáticos para centrar */
+        padding: 20px;
+    }
+}
+
+/* Diseño para pantallas de menos de 480px (teléfonos móviles pequeños) */
+@media (max-width: 480px) {
+    /* Ajusta el tamaño de la fuente para que sea más legible en pantallas pequeñas */
+    body {
+        font-size: 14px;
+    }
+
+    /* Ajuste adicional del tamaño de la imagen de perfil */
+    header img {
+        width: 120px;
+    }
+
+    /* Ajuste adicional del tamaño de los botones */
+    header .contact a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    /* Ajuste del tamaño de los iconos de habilidades */
+    .skill img {
+        width: 50px;
+    }
+
+    /* Margen más pequeño en los proyectos */
+    #projects .project {
+        padding: 20px;
+    }
+}
+
+/* Resoluciones de 1280px o menos */
+@media (max-width: 1280px) {
+    .container {
+        width: 90%; /* Haz que la página use más espacio horizontal */
+        margin: 0 auto; /* Centrar los elementos */
+    }
+    
+    header img {
+        width: 150px; /* Reducir el tamaño de la imagen de perfil */
+    }
+
+    header h1 {
+        font-size: 24px; /* Ajustar el tamaño de la fuente */
+    }
+
+    .contact img {
+        width: 16px; /* Reducir el tamaño de los iconos de redes sociales */
+    }
+
+    .skills {
+        display: grid; /* Hacer que las habilidades usen un grid flexible */
+        grid-template-columns: repeat(2, 1fr); /* Dos iconos por fila */
+        gap: 10px;
+    }
+
+    /* Proyectos destacados: ajustar el ancho */
+    #projects .project {
+        margin: 0 20px; /* Reducir el margen para que ocupe más espacio */
+        padding: 20px;
+    }
+}
+
+/* Resoluciones de 720px o menos */
+@media (max-width: 720px) {
+    header img {
+        width: 100px; /* Aún más pequeño para pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .contact img {
+        width: 14px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr; /* Una columna para pantallas muy pequeñas */
+    }
+
+    #about, #projects .project {
+        margin: 0 10px;
+        padding: 15px;
+    }
+}
+
+/* Resoluciones de 480px o menos */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header img {
+        width: 80px; /* Tamaño más pequeño para imagen */
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .contact img {
+        width: 12px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr; /* 1 columna por fila */
+        gap: 8px;
+    }
+
+    .container {
+        width: 95%; /* Mayor uso del espacio en pantallas pequeñas */
+    }
+
+    #projects .project {
+        margin: 0 5px; /* Margen mínimo para usar todo el espacio */
+        padding: 10px;
+    }
+}
+
+
