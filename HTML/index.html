@@ -3,11 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <meta name="description" content="Portafolio de Sergio González García, Administrador de Sistemas y Desarrollador Web.">
     <title>TheSechas</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!-- Link para íconos si es necesario (Ejemplo: FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
+    <!-- Header con tu nombre y descripción -->
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="../IMG/pedro.jpg" alt="Foto de Sergio González García">
+                <h1>Sergio González García</h1>
+                <p>Administrador de Sistemas y Formándome en Desarrollador Web y Software</p>
+                <div class="contact">
+                    <a href="https://github.com/TheSechas" target="_blank" class="btn"><img src="../IMG/git.png" alt="git">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sergio-gonzález-garcía-56796523a" target="_blank" class="btn"><img src="../IMG/in.png" alt="in">LinkedIn</a>
+                    <a href="../CV/CVSergioGonzálezGarcía.pdf" target="_blank" class="btn">CV</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="about">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <p>Soy Administrador de Sistemas. También me estoy formando como desarrollador web y software, aprendiendo tecnologías como HTML, CSS, JavaScript, Python y Unity(C#).</p>
+            <p>📍 A Coruña, España</p>
+            <p>🖥️ Liceo La Paz</p>
+            <p>📞 +34 621 22 36 25</p>
+            <div class="container2">
+                <h3>Correo de contacto: </h3>
+                <p><span id="email">sergiogg20012003@gmail.com</span></p>
+                <!-- Botón mailto -->
+                <button id="sendMailBtn">Enviar correo</button>
+                <!-- Botón copiar al portapapeles -->
+                <button id="copyBtn">Copiar correo</button>
+                <!-- Mensaje de copiado -->
+                <p id="copyMessage" style="display:none; color: rgb(7, 252, 7);"><span>¡Correo copiado al portapapeles!</span></p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Sección "Habilidades" -->
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <!-- Fila 1 -->
+                <div class="skill-row">
+                    <div class="skill">
+                        <img src="../IMG/html.png" alt="HTML5">
+                        <span class="tooltip">Intermedio</span>
+                    </div>
+                    <div class="skill">
+                        <img src="../IMG/css.png" alt="CSS3">
+                        <span class="tooltip">Intermedio</span>
+                    </div>
+                    <div class="skill">
+                        <img src="../IMG/js.png" alt="JavaScript">
+                        <span class="tooltip">Básico</span>
+                    </div>
+                </div>
+                <!-- Fila 2 -->
+                <div class="skill-row">
+                    <div class="skill">
+                        <img src="../IMG/powershell.png" alt="PowerShell">
+                        <span class="tooltip">Intermedio</span>
+                    </div>
+                    <div class="skill">
+                        <img src="../IMG/sql.png" alt="SQL">
+                        <span class="tooltip">Intermedio</span>
+                    </div>
+                    <div class="skill">
+                        <img src="../IMG/python.png" alt="Python">
+                        <span class="tooltip">Básico</span>
+                    </div>
+                    <div class="skill">
+                        <img src="../IMG/c.png" alt="C#">
+                        <span class="tooltip">Básico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Sección "Proyectos" -->
+    <section id="projects">
+        <div class="container">
+            <h2>Proyectos Destacados</h2>
+            <div class="project">
+                <h3>BicosBetanzos</h3>
+                <p>Nueva página web desarrollada en HTML y CSS para una empresa local. <span>(HTML, CSS, JavaScript)</span></p>
+                <a href="https://github.com/TheSechas/BicosBetanzos" target="_blank">Ver proyecto en GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Scripts</h3>
+                <p>Crear Dominio en una maquina (DC01) y unirse al segundo dominio en la segunda máquina (DC02), 
+                    crear Uninades Organizativas y Grupos dentro de ellas y dentro de los Grupos 1000 usuarios importados desde un CSV. <span>(PowerShell)</span></p>
+                <a href="https://github.com/TheSechas/Scripts" target="_blank">Ver proyecto en GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Python</h3>
+                <p>Ejercicios de Python que hice en clase. <span>(Python)</span></p>
+                <a href="https://github.com/TheSechas/Python" target="_blank">Ver proyecto en GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sergio González García. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
 </body>
-<script src="../JS/script.js"></script>
 </html>
