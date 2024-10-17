@@ -20,6 +20,16 @@
                     <a href="https://github.com/TheSechas" target="_blank" class="btn"><img src="../IMG/git.png" alt="git">GitHub</a>
                     <a href="https://www.linkedin.com/in/sergio-gonzález-garcía-56796523a" target="_blank" class="btn"><img src="../IMG/in.png" alt="in">LinkedIn</a>
                     <a href="../CV/CVSergioGonzálezGarcía.pdf" target="_blank" class="btn">CV</a>
+                    <div class="container2">
+                        <h3>Correo de contacto</h3>
+                        <p><img src="../IMG/email.png" alt="email"><span id="email">sergiogg20012003@gmail.com</span></p>
+                        <!-- Botón mailto -->
+                        <button id="sendMailBtn">Enviar correo</button>
+                        <!-- Botón copiar al portapapeles -->
+                        <button id="copyBtn">Copiar correo</button>
+                        <!-- Mensaje de copiado -->
+                        <p id="copyMessage" style="display:none; color: rgb(255, 255, 255);"><span>¡Correo copiado al portapapeles!</span></p>
+                    </div>
                     <button id="toggleThemeBtn">Cambiar a modo claro</button>
                 </div>
             </div>
@@ -30,20 +40,9 @@
     <h2 class="sobre-mi">Sobre mí</h2>
     <section id="about">
         <div class="container">
-            <p>Soy Administrador de Sistemas. También me estoy formando como desarrollador web y software, aprendiendo tecnologías como HTML, CSS, JavaScript, Python y Unity(C#).</p>
+            <p>Soy Administrador de Sistemas. También me estoy formando como desarrollador web y software, aprendiendo tecnologías como HTML, CSS, JavaScript, Python y Unity (C#).</p>
             <p>📍 A Coruña, España</p>
             <p>🖥️ Liceo La Paz</p>
-            <p>📞 +34 621 22 36 25</p>
-            <div class="container2">
-                <h3>Correo de contacto: </h3>
-                <p><span id="email">sergiogg20012003@gmail.com</span></p>
-                <!-- Botón mailto -->
-                <button id="sendMailBtn">Enviar correo</button>
-                <!-- Botón copiar al portapapeles -->
-                <button id="copyBtn">Copiar correo</button>
-                <!-- Mensaje de copiado -->
-                <p id="copyMessage" style="display:none; color: rgb(7, 252, 7);"><span>¡Correo copiado al portapapeles!</span></p>
-            </div>
         </div>
     </section>
 
@@ -64,6 +63,10 @@
                     </div>
                     <div class="skill">
                         <img src="../IMG/js.png" alt="JavaScript">
+                        <span class="tooltip">Básico</span>
+                    </div>
+                    <div class="skill">
+                        <img src="../IMG/java.png" alt="Java">
                         <span class="tooltip">Básico</span>
                     </div>
                 </div>
@@ -110,6 +113,14 @@
             </div>
         </div>
 
+    <!-- Sección "Experiencia" -->
+    <h2 class="sobre-mi">Experiencia</h2>
+    <section id="about">
+        <div class="container">
+            <p>He estado de práticas en una empresa de A Coruña llamada Cyma, pero no he tenido experencia laboral aún.</p>
+        </div>
+    </section>
+
     <!-- Sección "Proyectos" -->
     <section id="projects">
         <div class="container">
@@ -133,8 +144,51 @@
         </div>
     </section>
 
+    <section id="formacion">
+        <h2>Formación</h2>
+        <div class="container3">
+            <ul>
+                <img src="../IMG/cole.png" alt="cole">
+                <li>
+                    <h3>Francisco Aguiar</h3>
+                    <p>ESO</p>
+                    <p>2015-2020</p>
+                </li>
+                <img src="../IMG/cole.png" alt="cole">
+                <li>
+                    <h3>Liceo La Paz</h3>
+                    <p>Ciclo Medio Sistemas Microinformático y redes</p>
+                    <p>2020-2022</p>
+                </li>
+                <img src="../IMG/cole.png" alt="cole">
+                <li>
+                    <h3>Liceo La Paz</h3>
+                    <p>Ciclo Superior Desarrollo web</p>
+                    <p>2022-2023</p>
+                </li>
+                <img src="../IMG/cole.png" alt="cole">
+                <li>
+                    <h3>Liceo La Paz</h3>
+                    <p>Ciclo Superior Administrador de Sistemas informáticos en red</p>
+                    <p>2023-2025</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+
     <!-- Footer -->
     <footer>
+        <div id="foot">
+            <h3>Sergio González García</h3>
+                <div class="foot2">
+                    <p class="btn3"><a href="mailto:sergiogg20012003@gmail.com">sergiogg20012003@gmail.com</a></p>
+                    <a href="https://github.com/TheSechas" target="_blank" class="btn2"><img src="../IMG/git.png" alt="git">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sergio-gonzález-garcía-56796523a" target="_blank" class="btn2"><img src="../IMG/in.png" alt="in">LinkedIn</a>
+                    <a href="../CV/CVSergioGonzálezGarcía.pdf" target="_blank" class="btn2">CV</a>
+                </div>
+        </div>
         <div class="container">
             <p>&copy; 2024 Sergio González García. Todos los derechos reservados.</p>
         </div>
